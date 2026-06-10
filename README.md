@@ -41,6 +41,12 @@ Seeded demo accounts come from `.env`:
 
 These are dummy local credentials only. Real secrets should be supplied through `.env`, which is intentionally ignored by git.
 
+## Seeded Demo Accounts (For RBAC Testing)
+
+- **Admin Role:** `admin@example.com` / `admin1234`
+- **Reviewer Role:** `reviewer@example.com` / `reviewer1234`
+- **Reviewer 2 Role:** `reviewer2@example.com` / `reviewer21234`
+
 ## Run Locally
 
 Backend:
