@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      DATABASE_URL: sqlite:////data/techkraft.db
+      JWT_SECRET: ${JWT_SECRET:-dev-only-change-me-32-byte-local-secret}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-120}
+      DEMO_ADMIN_EMAIL: ${DEMO_ADMIN_EMAIL:-admin@example.com}
+      DEMO_ADMIN_PASSWORD: ${DEMO_ADMIN_PASSWORD:-admin1234}
+      DEMO_REVIEWER_EMAIL: ${DEMO_REVIEWER_EMAIL:-reviewer@example.com}
+      DEMO_REVIEWER_PASSWORD: ${DEMO_REVIEWER_PASSWORD:-reviewer1234}
+      DEMO_REVIEWER2_EMAIL: ${DEMO_REVIEWER2_EMAIL:-reviewer2@example.com}
+      DEMO_REVIEWER2_PASSWORD: ${DEMO_REVIEWER2_PASSWORD:-reviewer21234}
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend-data:/data
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:
