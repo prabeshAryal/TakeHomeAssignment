@@ -19,6 +19,19 @@ docker compose up --build
 - Backend API: http://localhost:8000
 - API docs: http://localhost:8000/docs
 
+## Deployed Application & Live Access
+
+### Production Domains (Cloudflare Proxied with automatic HTTPS)
+- **Frontend Dashboard:** [https://techkraft.prabe.sh](https://techkraft.prabe.sh)
+- **Backend API Docs:** [https://techkraftapi.prabe.sh/docs](https://techkraftapi.prabe.sh/docs)
+- **Backend Health Check:** [https://techkraftapi.prabe.sh/health](https://techkraftapi.prabe.sh/health)
+
+### Direct AWS EC2 Server Access (Instant IP Access)
+- **Frontend Dashboard:** [http://15.206.210.219:5173](http://15.206.210.219:5173)
+- **Backend API Docs:** [http://15.206.210.219:8000/docs](http://15.206.210.219:8000/docs)
+- **Backend Health Check:** [http://15.206.210.219:8000/health](http://15.206.210.219:8000/health)
+
+
 Seeded demo accounts come from `.env`:
 
 - Admin: `DEMO_ADMIN_EMAIL` / `DEMO_ADMIN_PASSWORD`
