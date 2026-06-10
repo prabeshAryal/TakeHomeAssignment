@@ -27,9 +27,10 @@ docker compose up --build
 - **Backend Health Check:** [https://techkraftapi.prabe.sh/health](https://techkraftapi.prabe.sh/health)
 
 ### Direct AWS EC2 Server Access (Instant IP Access)
-- **Frontend Dashboard:** [http://15.206.210.219:5173](http://15.206.210.219:5173)
-- **Backend API Docs:** [http://15.206.210.219:8000/docs](http://15.206.210.219:8000/docs)
-- **Backend Health Check:** [http://15.206.210.219:8000/health](http://15.206.210.219:8000/health)
+- **Frontend Dashboard:** [https://15.206.210.219](https://15.206.210.219) (HTTPS, bypass warning) or [http://15.206.210.219:5173](http://15.206.210.219:5173)
+- **Backend API Docs:** [https://15.206.210.219/docs](https://15.206.210.219/docs) (HTTPS, bypass warning) or [http://15.206.210.219:8000/docs](http://15.206.210.219:8000/docs)
+- **Backend Health Check:** [https://15.206.210.219/health](https://15.206.210.219/health) (HTTPS, bypass warning) or [http://15.206.210.219:8000/health](http://15.206.210.219:8000/health)
+
 
 
 Seeded demo accounts come from `.env`:
